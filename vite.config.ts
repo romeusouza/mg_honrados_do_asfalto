@@ -12,7 +12,8 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [react()],
+  base: '/mg_honrados_do_asfalto/', // ADICIONE ESTA LINHA
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
