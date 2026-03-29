@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.25rem;
+
+    --font-display: 'Oswald', sans-serif;
+    --font-heading: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 2%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 10%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-hero-overlay: linear-gradient(180deg, hsla(0 0% 0% / 0.3) 0%, hsla(0 0% 0% / 0.85) 100%);
+    --shadow-glow: 0 0 30px hsla(0 0% 100% / 0.05);
+    --shadow-card: 0 8px 32px hsla(0 0% 0% / 0.4);
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-5xl font-bold tracking-wider uppercase text-foreground;
+  }
+
+  .section-subtitle {
+    font-family: var(--font-heading);
+    @apply text-lg md:text-xl font-light tracking-wide text-muted-foreground mt-4;
+  }
+
+  .divider-line {
+    @apply w-20 h-0.5 bg-foreground mx-auto mt-6 mb-10;
+  }
+
+  .card-biker {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    @apply border border-border rounded-sm overflow-hidden transition-all duration-300;
+  }
+
+  .card-biker:hover {
+    @apply border-foreground/20;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-biker {
+    font-family: var(--font-heading);
+    @apply inline-flex items-center justify-center px-8 py-3 text-lg font-semibold uppercase tracking-widest
+           bg-foreground text-background rounded-none
+           transition-all duration-300
+           hover:bg-transparent hover:text-foreground border-2 border-foreground;
+  }
+
+  .btn-biker-outline {
+    font-family: var(--font-heading);
+    @apply inline-flex items-center justify-center px-8 py-3 text-lg font-semibold uppercase tracking-widest
+           bg-transparent text-foreground rounded-none
+           transition-all duration-300
+           hover:bg-foreground hover:text-background border-2 border-foreground;
+  }
+
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center
+           shadow-lg transition-transform duration-300 hover:scale-110;
+    background-color: hsl(142 70% 45%);
+  }
+}
