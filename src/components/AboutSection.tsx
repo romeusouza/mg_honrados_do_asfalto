@@ -37,7 +37,7 @@ const AboutSection = () => {
                 A Estrada nos une. A Honra nos define.
               </h3>
               <p className="font-body text-muted-foreground leading-relaxed">
-                O <strong className="text-foreground">MG Honrados do Asfalto ⚔️🛡️  </strong> nasceram da paixão compartilhada 
+                O <strong className="text-foreground">MG Honrados do Asfalto ⚔️🛡️  </strong> nasceu da paixão compartilhada 
                 por motos e pela estrada. Fundado em 23/07/22. Somos um moto grupo que acredita que a verdadeira liberdade está em 
                 rodar juntos, com respeito, lealdade e honra.
               </p>
