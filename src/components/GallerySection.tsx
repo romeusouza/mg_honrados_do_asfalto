@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
@@ -35,8 +35,9 @@ const GallerySection = () => {
         {/* Instagram Feed Widget - substitua o ID abaixo pelo seu widget Elfsight */}
         <AnimatedSection delay={0.1}>
           <div className="mt-4 flex justify-center">
+            <script src="https://elfsightcdn.com/platform.js" async></script>
             <div
-              className="elfsight-app-SUBSTITUA-PELO-SEU-ID"
+              className="elfsight-app-42a4de7f-aff6-490d-b294-43fad48ba740"
               data-elfsight-app-lazy
             />
           </div>
@@ -98,4 +99,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+/*export default GallerySection;*/
